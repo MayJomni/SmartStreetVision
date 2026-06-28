@@ -1,47 +1,75 @@
-🔍 AI Object Detection - Street Objects Detector by (@y3shiri)
+# 🎯 SmartStreetVision by MAY JOMNI — AI-Powered Urban Scene Analysis
 
-Detect and recognize objects in street videos using YOLOv8 AI! 🚗🚶‍♂️🚦
+> Real-time street intelligence using YOLOv8 | Built by **May Jomni** — Engineering Student at ENSTAB
 
-## ✨ Features
+---
 
-- 🚗 **Detect 80+ Objects** - Cars, people, traffic lights, trucks, bicycles, and more!
-- 🎯 **Real-Time Detection** - Process videos frame by frame
-- 🎨 **Modern Design** - Clean, minimal boxes with subtle corner accents
-- 💾 **Save Output** - Automatically save processed videos
-- 📸 **Screenshot** - Capture any frame with 's' key
-- 🚀 **Fast & Efficient** - Optimized for real-time performance
+## 🚀 What This Project Does
 
-## 🎯 What It Detects
+SmartStreetVision is an AI computer vision system that analyzes street videos in real-time and detects:
 
-| Object Type | Examples |
-|-------------|----------|
-| **Vehicles** | Car, Truck, Bus, Bicycle, Motorcycle |
-| **People** | Person, Crowd |
-| **Infrastructure** | Traffic Light, Stop Sign, Parking Meter |
-| **Street Objects** | Bench, Fire Hydrant, Potted Plant |
-| **Animals** | Cat, Dog, Horse, Sheep |
-| **...and 60+ more!** | Airplane, Boat, Train, etc. |
+| Feature | Description |
+|--------|-------------|
+| 🚗 Object Detection | Cars, trucks, buses, motorcycles, persons, bicycles |
+| 🌤️ Weather Detection | Sunny, Cloudy, Foggy, Rainy/Dark |
+| ⚠️ Danger Alerts | Crowd detected, Person near vehicle |
+| 🚦 Traffic Density | No traffic → Light → Moderate → Heavy → Traffic Jam |
+| 📊 Traffic History | Real-time graph of vehicle count over time |
+| 🕐 Date & Time | Live date, time, and time of day |
+| ➡️ Direction Tracking | Vehicle movement direction (>>>, <<<, ^^^, vvv) |
+| 📈 FPS Counter | Real-time performance monitoring |
+| 🔊 Sound Alert | Beep alarm when danger is detected |
+| 💾 CSV Export | All detections saved to `detection_stats.csv` |
+| 🌙 Night Vision | CLAHE enhancement for dark/night videos |
 
-## 🛠️ Technologies
+---
 
-- **Python 3.9+** - Programming language
-- **YOLOv8** - State-of-the-art object detection AI
-- **OpenCV** - Video processing and visualization
-- **Ultralytics** - YOLO implementation
+## 🛠️ Technologies Used
+
+- **Python 3.12**
+- **YOLOv8** (Ultralytics) — State-of-the-art object detection
+- **OpenCV** — Video processing and visualization
+- **NumPy** — Numerical computation
+- **CSV** — Detection data logging
+
+---
 
 ## 📦 Installation
 
-### 1. Clone or Download
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-object-detection.git
-cd ai-object-detection
+git clone https://github.com/MayJomni/SmartStreetVision.git
+cd SmartStreetVision
+pip install ultralytics opencv-python numpy
+```
 
-2. install dependecies:
-**pip install ultralytics opencv-python**
+---
 
-3. Put Your Video
-**Place your video file (.mp4 or .mov) in the same folder**
+## ▶️ Usage
 
-Made with ❤️ by y3shiri 🇹🇳
+1. Place your video file (.mp4) in the project folder
+2. Edit line 13 in `object_detection.py`:
+```python
+video_file = "your_video_name.mp4"
+```
+3. Run:
+```bash
+python object_detection.py
+```
 
-Follow me for more AI projects! 🚀
+### Controls
+| Key | Action |
+|-----|--------|
+| `Q` | Quit |
+| `S` | Save screenshot |
+
+---
+
+## 📁 Output Files
+
+- `output_<video_name>.mp4` — Annotated video with all detections
+- `detection_stats.csv` — Frame-by-frame detection log
+- `screenshot_frame_X.png` — Screenshots captured during playback
+
+---
+
+## 🧠 How It Works
