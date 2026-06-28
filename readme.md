@@ -1,26 +1,46 @@
-# 🎯 SmartStreetVision by MAY JOMNI — AI-Powered Urban Scene Analysis
+# 🎯 SmartStreetVision — AI-Powered Urban Scene Analysis
 
 > Real-time street intelligence using YOLOv8 | Built by **May Jomni** — Engineering Student at ENSTAB
 
 ---
 
-## 🚀 What This Project Does
+## 📌 Project Origin & My Contributions
 
-SmartStreetVision is an AI computer vision system that analyzes street videos in real-time and detects:
+This project started from a basic object detection script cloned from [@ihebaln](https://github.com/ihebaln).
+
+### 🔵 What the original project had:
+- Basic YOLOv8 object detection
+- Colored bounding boxes around detected objects
+- Simple video display
+
+### 🟢 What I added and built:
 
 | Feature | Description |
-|--------|-------------|
-| 🚗 Object Detection | Cars, trucks, buses, motorcycles, persons, bicycles |
-| 🌤️ Weather Detection | Sunny, Cloudy, Foggy, Rainy/Dark |
-| ⚠️ Danger Alerts | Crowd detected, Person near vehicle |
-| 🚦 Traffic Density | No traffic → Light → Moderate → Heavy → Traffic Jam |
-| 📊 Traffic History | Real-time graph of vehicle count over time |
-| 🕐 Date & Time | Live date, time, and time of day |
-| ➡️ Direction Tracking | Vehicle movement direction (>>>, <<<, ^^^, vvv) |
-| 📈 FPS Counter | Real-time performance monitoring |
-| 🔊 Sound Alert | Beep alarm when danger is detected |
-| 💾 CSV Export | All detections saved to `detection_stats.csv` |
-| 🌙 Night Vision | CLAHE enhancement for dark/night videos |
+|---------|-------------|
+| 🌤️ Weather Detection | Detects Sunny, Cloudy, Foggy, Rainy/Dark conditions from frame analysis |
+| ⚠️ Danger Alerts | Alerts when crowd detected or person is too close to a vehicle |
+| 🔊 Sound Alert | Beep alarm triggered automatically when danger is detected |
+| 🚦 Traffic Density | Real-time traffic level: No Traffic → Light → Moderate → Heavy → Traffic Jam |
+| 📊 Traffic History Graph | Live graph showing vehicle count over the last 30 frames |
+| 🕐 Date, Time & FPS | Live date, time, time of day and FPS counter on screen |
+| ➡️ Direction Tracking | Detects vehicle movement direction (>>>, <<<, ^^^, vvv) |
+| 📈 Object Counter | Counts each detected object category in real-time |
+| 💾 CSV Export | Saves all detections frame by frame to `detection_stats.csv` |
+| 🌙 Night Vision | CLAHE enhancement to improve detection in dark/night videos |
+| 🎯 Confidence Filter | Ignores detections below 45% confidence |
+| 🚫 Class Filter | Excludes irrelevant classes (train, airplane, boat) for street scenes |
+
+---
+
+## 🚀 What This Project Does
+
+SmartStreetVision analyzes street videos in real-time and provides:
+- Full object detection with confidence scores
+- Weather condition analysis from video frames
+- Danger detection with sound alerts
+- Traffic density monitoring with history graph
+- Vehicle direction tracking
+- Complete detection logging to CSV
 
 ---
 
